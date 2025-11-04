@@ -1,2 +1,9 @@
-backend/.env
+
 frontend/node_modules
+frontend/out
+frontend/build
+frontend/.next  
+
+backend/.venv
+backend/_pycache_
+backend/.env
