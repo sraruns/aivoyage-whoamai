@@ -7,3 +7,6 @@ frontend/.next
 backend/.venv
 backend/_pycache_
 backend/.env
+
+lambda-deployment.zip
+lambda-package/

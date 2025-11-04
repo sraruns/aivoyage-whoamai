@@ -1,0 +1,20 @@
+{
+    "full_name": "Arun Kumar Selvaraju",
+    "name": "Arun",
+    "current_role": "Tech Lead",
+    "location": "Chennai, India",
+    "email": "sraruns@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/a-selva/",
+    "specialties": [
+      "Building, modernising large scale enterprise application and migrated to cloud",
+      "Building GENAI applications with LLM, Langraph, openaisdk, crewai and deploying these in AWS at scale"
+    ],
+    "years_experience": 15,
+    "education": [
+      {
+        "degree": "B.E. (Electronics and Communication Engineering)",
+        "institution": "Anna University",
+        "year": "2008"
+      }
+    ]
+  }

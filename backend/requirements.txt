@@ -4,3 +4,10 @@ openai
 python-dotenv
 python-multipart
 requests
+pypdf
+
+# AWS Api for Aws functions
+boto3
+
+# Fastapi for lambda
+mangum
