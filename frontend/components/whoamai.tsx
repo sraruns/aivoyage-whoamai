@@ -40,7 +40,9 @@ export default function Twin() {
         setIsLoading(true);
 
         try {
-            const response = await fetch('http://localhost:8000/chat', {
+            //const response = await fetch('http://localhost:8000/chat', {
+            // With your API Gateway URL:
+            const response = await fetch('https://5l064x1e7e.execute-api.us-east-1.amazonaws.com/chat', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
