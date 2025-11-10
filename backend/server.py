@@ -78,19 +78,24 @@ async def chat(request: ChatRequest) -> ChatResponse:
         history_messages = memory.load_conversation(session_id, prompt())
         history_messages.append({"role":"user", "content": request.message})
         print("Loaded Conversations", history_messages)
-        response = client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=history_messages
-        )
-        print("Response from openai", response.choices[0].message.content)
-        history_messages.append({"role":"system", "content": response.choices[0].message.content})
+
+        response_content = get_response_from_openai(client, history_messages)
+        history_messages.append({"role":"assistant", "content": response_content})
         print("Updated Conversations", history_messages)
         memory.save_conversation(session_id, history_messages)
-        return ChatResponse(response=response.choices[0].message.content, session_id=session_id)
+        return ChatResponse(response=response_content, session_id=session_id)
     except Exception as e:
         print(e)
         raise HTTPException(status_code=500, detail=str(e))
 
+def get_response_from_openai(client, history_messages):
+    response = client.chat.completions.create(  
+        model="gpt-4o-mini",    
+        messages=history_messages
+    )
+    return response.choices[0].message.content
+
+def get_response_from_bedrock(history_messages):
 
 
 if __name__ == "__main__":

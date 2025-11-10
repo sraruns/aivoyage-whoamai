@@ -1,4 +1,4 @@
-import Twin from '@/components/whoamai';
+import whoamai from '@/components/whoamai';
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
           </p>
 
           <div className="h-[600px]">
-            <Twin />
+            <whoamai />
           </div>
 
           <footer className="mt-8 text-center text-sm text-gray-500">
