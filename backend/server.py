@@ -95,8 +95,3 @@ def get_response_from_openai(client, history_messages):
     )
     return response.choices[0].message.content
 
-def get_response_from_bedrock(history_messages):
-
-
-if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
